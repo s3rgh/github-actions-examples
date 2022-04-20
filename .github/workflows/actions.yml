@@ -3,7 +3,7 @@ name: Actions Workflow
 on: [ push ]
 
 jobs:
-  run-github-actions:
+  actions:
     strategy:
       fail-fast: false
       matrix:
@@ -20,8 +20,8 @@ jobs:
         run: |
           pwd
           ls
-  run-github-actions2:
-    runs-on: ${{ matrix.os }}
+  actions2:
+    runs-on: ubuntu-20.04
     steps:
       - name: list files
         run: |
