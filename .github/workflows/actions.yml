@@ -7,7 +7,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest, linux ]
+        os: [ ubuntu-latest, ubuntu-20.04 ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: list files
