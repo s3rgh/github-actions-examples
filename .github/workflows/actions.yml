@@ -7,33 +7,29 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ ubuntu-latest, windows-latest ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: list files
         run: |
-            pwd
-            ls -a
-
+          pwd
+          ls -a
       - name: Set up working directory
         uses: actions/checkout@v3
-
       - name: list files
         run: |
-            pwd
-            ls
+          pwd
+          ls
   run-github-actions2:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: list files
         run: |
-        pwd
-        ls -a
-
+          pwd
+          ls -a
       - name: Set up working directory
         uses: actions/checkout@v3
-
       - name: list files
         run: |
-        pwd
-        ls
+          pwd
+          ls
