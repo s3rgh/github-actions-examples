@@ -9,7 +9,7 @@ jobs:
       - name: list files
         run: |
             pwd
-            ls
+            ls -a
 
       - name: Set up working directory
         uses: actions/checkout@v2
