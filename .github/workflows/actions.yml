@@ -22,7 +22,4 @@ jobs:
           ls
   actions2:
     needs: actions
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Kick another repo workflow
-        uses: s3rgh/github-actions-client/.github/workflows/from_remote_repo.yml.yml@main
+    uses: s3rgh/github-actions-client/.github/workflows/from_remote_repo.yml.yml@main
