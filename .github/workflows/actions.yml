@@ -1,25 +1,7 @@
 name: Actions Workflow
 
-on: [push]
+on: push
 
 jobs:
   actions:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ ubuntu-latest, ubuntu-20.04 ]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: list files
-        run: |
-          pwd
-          ls -a
-      - name: Set up working directory
-        uses: actions/checkout@v3
-      - name: list files
-        run: |
-          pwd
-          ls
-  actions2:
-    needs: actions
     uses: s3rgh/github-actions-client/.github/workflows/from_remote_repo.yml@main
