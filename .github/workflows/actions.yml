@@ -7,5 +7,4 @@ on:
 
 jobs:
   actions:
-    uses: s3rgh/github-actions-client/.github/workflows/from_remote_repo.yml@main
-
+    uses: s3rgh/github-actions-client/.github/workflows/remote.yml@main
