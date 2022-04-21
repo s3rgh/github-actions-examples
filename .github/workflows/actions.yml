@@ -1,8 +1,11 @@
 name: Actions Workflow
 
-on: [push]
+on:
+  push:
+    branches:
+    - main
 
 jobs:
   actions:
-    uses: s3rgh/github-actions-client/.github/workflows/from_remote_repo.yml@d6696c99bc5e1c33ef0acb71840ce30df30ae07c
+    uses: s3rgh/github-actions-client/.github/workflows/from_remote_repo.yml@main
 
