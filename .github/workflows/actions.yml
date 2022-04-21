@@ -24,13 +24,10 @@ jobs:
     needs: actions
     runs-on: ubuntu-20.04
     steps:
-      - name: list files
-        run: |
-          pwd
-          ls -a
-      - name: Set up working directory
-        uses: actions/checkout@v3
-      - name: list files
-        run: |
-          pwd
-          ls
+      - name: Kick another repo workflow
+        uses: convictional/trigger-workflow-and-wait@v1.3.0
+        with:
+           owner: s3rgh
+           repo: github-actions-client
+           github_token: ${{ secrets.G_ACCESS_TOKEN }}
+           workflow_file_name: from_remote_repo.yml
