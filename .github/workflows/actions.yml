@@ -4,5 +4,5 @@ on: [push]
 
 jobs:
   actions:
-    uses: s3rgh/github-actions-client/.github/workflows/from_remote_repo.yml
+    uses: s3rgh/github-actions-client/.github/workflows/from_remote_repo.yml@v1
 
