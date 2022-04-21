@@ -7,4 +7,7 @@ on:
 
 jobs:
   actions:
-    uses: s3rgh/github-actions-client/.github/workflows/remote.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tests
+        uses: s3rgh/github-actions-client/.github/workflows/remote.yml@main
